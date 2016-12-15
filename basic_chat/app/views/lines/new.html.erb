@@ -1,0 +1,15 @@
+<h1>type your message to the universe</h1>
+<%= form_for :line, url: lines_path do |f|  %>
+<%= f.label :username %>
+<%= f.text_field :username %>
+
+
+
+<%= f.label :message %>
+<%= f.text_field :message %>
+
+<%= f.submit "submit" %>
+<% end %>
+
+
+

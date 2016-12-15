@@ -1,0 +1,11 @@
+<h1>Here are the Books</h1>
+
+<% @books.each do |book| %>
+<div style="border: 1px solid; background: aliceblue">
+<%= book.title %> </br>
+<%=	book.category%> </br>
+<%= book.review %>  </br>
+<%= book.author %>  </br>
+<%= book.sku %> </br>
+</div>
+<% end %>

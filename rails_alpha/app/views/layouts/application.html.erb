@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsAlpha</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav>
+    <ul>
+    	<li><%=link_to "home", page_home_path %></li>
+    	<li><%=link_to "about", page_about_path %></li>
+    	<li><%=link_to "contact", page_contact_path %></li>
+<% if user_signed_in? %> 
+
+<p>You're signed in! Welcome<p>    
+       <li><%= link_to "sign in",new_user_session_path %></li>
+<% else %> 
+<p>please register or sign in<p>      
+       <li><%= link_to "sign up",new_user_registration_path %></li>
+       <li><%= link_to "sign out",destroy_user_session_path, method: :delete %></li>
+<% end %>       
+    </ul>
+  </nav>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>
