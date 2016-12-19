@@ -1,6 +1,10 @@
 class CreateCameras < ActiveRecord::Migration[5.0]
   def change
     create_table :cameras do |t|
+      t.string :brand
+      t.string :model
+      t.text :review
+      t.string :serial
 
       t.timestamps
     end

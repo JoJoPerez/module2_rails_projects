@@ -10,9 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161215191207) do
+ActiveRecord::Schema.define(version: 20161219163435) do
 
   create_table "cameras", force: :cascade do |t|
+    t.string   "brand"
+    t.string   "model"
+    t.text     "review"
+    t.string   "serial"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
