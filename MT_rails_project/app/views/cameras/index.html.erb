@@ -1,0 +1,14 @@
+<% provide(:title, 'Camera Index Page') %>
+
+<h1 style="border: 2px solid; background: lavender">Index for Cameras</h1>
+
+
+<% @cameras.each do |camera| %>
+<div style="border: 2px solid; background: bisque">
+<%= camera.brand %> </br>
+<%=	camera.model%>  </br>
+<%= camera.serial %> </br> 
+<%= camera.review %> </br>
+</div>
+<% end %>
+

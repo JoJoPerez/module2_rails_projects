@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MTRailsProject</title>
+  	<title> Welcome you are on the: <%= (yield(:title)) %></title>
+    <title>JoJo's MTRailsProject</title>
     <%= csrf_meta_tags %>
 
+</head>
 
-
-    
-    
-  </head>
-
+  
   <body>
-  <% cameras_path do |camera| %>
-<div style="border: 1px solid; background: aliceblue">
-<%= camera.type %> </br>
-<%=	camera.model%> </br>
-<%= camera.serial %>  </br>
-<%= camera.sku %> </br>
-<%= camera.review %> </br>
-</div>
-<% end %>
+  	<header>
+  	<h1>welcome to my camera hut</h1>
+  		<img src="http://www.digitalproductionme.com/pictures/sony_a7sii.jpg">
+  	</header>	
+
+  	<h1><%= (yield(:title)) %></title></h1>
+
+  
     <%= yield %>
+
+  
   </body>
 </html>

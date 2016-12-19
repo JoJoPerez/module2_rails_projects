@@ -19,7 +19,7 @@ class CamerasController < ApplicationController
 
  private
  def camera_whitelisted
- 	 params.require(:camera).permit(brand:, :model, :serial, :sku, :review)
+ 	 params.require(:camera).permit(:brand, :model, :serial, :review)
  	 
  
  end
