@@ -4,17 +4,29 @@
   	<title> Welcome you are on the: <%= (yield(:title)) %></title>
     <title>JoJo's MTRailsProject</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
   
   <body>
   	<header>
-  	<h1>welcome to my camera hut</h1>
-  		<img src="http://www.digitalproductionme.com/pictures/sony_a7sii.jpg">
-  	</header>	
+  	<h1 style="border:solid; black, blue,          -webkit- box-shadow: 10px 10px 78px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 10px 10px 78px 0px rgba(0,0,0,0.75);
+      box-shadow: 10px 10px 78px 0px rgba(0,0,0,0.75";>welcome to my camera hut</h1>
+    
+    <%= image_tag("sonyfs7.jpg", :size => "160x90") %>
+  </header>	
+
 
   	<h1><%= (yield(:title)) %></title></h1>
+    
+      <button type="button" class="btn btn-primary">CAMERAS</button>
+    
+
 
   
     <%= yield %>
