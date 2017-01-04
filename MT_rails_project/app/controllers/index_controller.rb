@@ -17,7 +17,7 @@ class IndexController < ApplicationController
  	 @camera = Camera.new(camera_whitelisted)
 
  	 @camera.save
- 	 redirected_to @camera
+ 	 redirect_to @camera
  end
 
  private
