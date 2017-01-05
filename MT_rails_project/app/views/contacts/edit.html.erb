@@ -1,0 +1,12 @@
+<h1>Edit your posts here</h1>
+<%= contact.name %>
+
+<%= form_tag contacts_path do %>
+  <label>Contact title:</label><br>
+  <%= text_field_tag :title, @contact.title %><br>
+
+  <label>Contact Description</label><br>
+  <%= text_area_tag :description, @contact.description %><br>
+
+  <%= submit_tag "Submit Post" %>
+<% end %>

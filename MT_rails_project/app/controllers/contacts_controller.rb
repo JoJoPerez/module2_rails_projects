@@ -17,6 +17,19 @@ class ContactsController < ApplicationController
  	 redirect_to @contact
  end
 
+ def destroy
+ 	@contact = Contact.find(params[:id])
+ 	@contact.destroy
+ 	redirect_to @contact
+ end
+
+ def edit
+ 	@contact = Contact.find(params[:id])
+ 	@contact.edit
+ 	redirect_to @contact 
+ end
+
+ 	
  private
  def contact_whitelisted
  	 params.require(:contact).permit(:name, :subject, :message)
